@@ -1,0 +1,404 @@
+﻿main.obj : error LNK2019: símbolo externo indefinido "void __stdcall `eh vector constructor iterator'(void *,unsigned int,unsigned int,void (__thiscall*)(void *),void (__thiscall*)(void *))" (??_L@YGXPAXIIP6EX0@Z1@Z) referenciado na função "public: __thiscall glm::tmat4x4<float,0>::tmat4x4<float,0><double,0>(struct glm::tmat4x4<double,0> const &)" (??$?0N$0A@@?$tmat4x4@M$0A@@glm@@QAE@ABU?$tmat4x4@N$0A@@1@@Z)
+main.obj : error LNK2019: símbolo externo indefinido "void __stdcall `eh vector destructor iterator'(void *,unsigned int,unsigned int,void (__thiscall*)(void *))" (??_M@YGXPAXIIP6EX0@Z@Z) referenciado na função __unwindfunclet$??$?0N$0A@@?$tmat4x4@M$0A@@glm@@QAE@ABU?$tmat4x4@N$0A@@1@@Z$0
+shader.obj : error LNK2001: símbolos externos indefinidos "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z)
+mesh.obj : error LNK2001: símbolos externos indefinidos "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "void __cdecl operator delete(void *)" (??3@YAXPAX@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "void __cdecl operator delete(void *)" (??3@YAXPAX@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "void __cdecl operator delete(void *)" (??3@YAXPAX@Z)
+mesh.obj : error LNK2001: símbolos externos indefinidos "void __cdecl operator delete(void *)" (??3@YAXPAX@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "void __cdecl operator delete(void *)" (??3@YAXPAX@Z)
+main.obj : error LNK2019: símbolo externo indefinido _atexit referenciado na função "void __cdecl `dynamic initializer for 'vboColors''(void)" (??__EvboColors@@YAXXZ)
+main.obj : error LNK2019: símbolo externo indefinido ___report_rangecheckfailure referenciado na função "void __cdecl exibirFPS(double,double &,double &,unsigned int &,struct GLFWwindow *)" (?exibirFPS@@YAXNAAN0AAIPAUGLFWwindow@@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido __imp___invalid_parameter referenciado na função __unwindfunclet$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z$0
+main.obj : error LNK2001: símbolos externos indefinidos __imp___invalid_parameter
+glError.obj : error LNK2001: símbolos externos indefinidos __imp___invalid_parameter
+mesh.obj : error LNK2001: símbolos externos indefinidos __imp___invalid_parameter
+model.obj : error LNK2001: símbolos externos indefinidos __imp___invalid_parameter
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __thiscall std::_Lockit::_Lockit(int)" (__imp_??0_Lockit@std@@QAE@H@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __thiscall std::_Lockit::_Lockit(int)" (__imp_??0_Lockit@std@@QAE@H@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __thiscall std::_Lockit::_Lockit(int)" (__imp_??0_Lockit@std@@QAE@H@Z)
+mesh.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __thiscall std::_Lockit::_Lockit(int)" (__imp_??0_Lockit@std@@QAE@H@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __thiscall std::_Lockit::_Lockit(int)" (__imp_??0_Lockit@std@@QAE@H@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __thiscall std::_Lockit::~_Lockit(void)" (__imp_??1_Lockit@std@@QAE@XZ)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __thiscall std::_Lockit::~_Lockit(void)" (__imp_??1_Lockit@std@@QAE@XZ)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __thiscall std::_Lockit::~_Lockit(void)" (__imp_??1_Lockit@std@@QAE@XZ)
+mesh.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __thiscall std::_Lockit::~_Lockit(void)" (__imp_??1_Lockit@std@@QAE@XZ)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __thiscall std::_Lockit::~_Lockit(void)" (__imp_??1_Lockit@std@@QAE@XZ)
+main.obj : error LNK2019: símbolo externo indefinido __imp__exit referenciado na função "void __cdecl initGL(struct GLFWwindow *)" (?initGL@@YAXPAUGLFWwindow@@@Z)
+initShaders.obj : error LNK2001: símbolos externos indefinidos __imp__exit
+main.obj : error LNK2019: símbolo externo indefinido _cos referenciado na função _cosf
+main.obj : error LNK2019: símbolo externo indefinido _sin referenciado na função _sinf
+main.obj : error LNK2019: símbolo externo indefinido _sqrt referenciado na função _sqrtf
+main.obj : error LNK2019: símbolo externo indefinido _tan referenciado na função "struct glm::tmat4x4<double,0> __cdecl glm::perspective<double>(double,double,double,double)" (??$perspective@N@glm@@YA?AU?$tmat4x4@N$0A@@0@NNNN@Z)
+main.obj : error LNK2019: símbolo externo indefinido __imp____acrt_iob_func referenciado na função "void __cdecl exibirFPS(double,double &,double &,unsigned int &,struct GLFWwindow *)" (?exibirFPS@@YAXNAAN0AAIPAUGLFWwindow@@@Z)
+main.obj : error LNK2019: símbolo externo indefinido __imp__fflush referenciado na função "void __cdecl exibirFPS(double,double &,double &,unsigned int &,struct GLFWwindow *)" (?exibirFPS@@YAXNAAN0AAIPAUGLFWwindow@@@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos __imp__fflush
+main.obj : error LNK2019: símbolo externo indefinido __imp____stdio_common_vsprintf referenciado na função _vsnprintf
+glfw3.lib(init.c.obj) : error LNK2001: símbolos externos indefinidos __imp____stdio_common_vsprintf
+shader.obj : error LNK2001: símbolos externos indefinidos _memmove
+main.obj : error LNK2001: símbolos externos indefinidos _memmove
+glError.obj : error LNK2001: símbolos externos indefinidos _memmove
+mesh.obj : error LNK2001: símbolos externos indefinidos _memmove
+model.obj : error LNK2001: símbolos externos indefinidos _memmove
+model.obj : error LNK2001: símbolos externos indefinidos _strlen
+shader.obj : error LNK2001: símbolos externos indefinidos _strlen
+main.obj : error LNK2001: símbolos externos indefinidos _strlen
+initShaders.obj : error LNK2001: símbolos externos indefinidos _strlen
+glError.obj : error LNK2001: símbolos externos indefinidos _strlen
+mesh.obj : error LNK2001: símbolos externos indefinidos _strlen
+main.obj : error LNK2019: símbolo externo indefinido __imp__strtok referenciado na função "void __cdecl initGL(struct GLFWwindow *)" (?initGL@@YAXPAUGLFWwindow@@@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "bool __cdecl std::uncaught_exception(void)" (?uncaught_exception@std@@YA_NXZ)
+main.obj : error LNK2001: símbolos externos indefinidos "bool __cdecl std::uncaught_exception(void)" (?uncaught_exception@std@@YA_NXZ)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "bool __cdecl std::uncaught_exception(void)" (?uncaught_exception@std@@YA_NXZ)
+glError.obj : error LNK2001: símbolos externos indefinidos "bool __cdecl std::uncaught_exception(void)" (?uncaught_exception@std@@YA_NXZ)
+model.obj : error LNK2001: símbolos externos indefinidos "bool __cdecl std::uncaught_exception(void)" (?uncaught_exception@std@@YA_NXZ)
+shader.obj : error LNK2019: símbolo externo indefinido __imp___CrtDbgReportW referenciado na função "public: __thiscall std::exception::exception(class std::exception const &)" (??0exception@std@@QAE@ABV01@@Z)
+main.obj : error LNK2001: símbolos externos indefinidos __imp___CrtDbgReportW
+glError.obj : error LNK2001: símbolos externos indefinidos __imp___CrtDbgReportW
+mesh.obj : error LNK2001: símbolos externos indefinidos __imp___CrtDbgReportW
+model.obj : error LNK2001: símbolos externos indefinidos __imp___CrtDbgReportW
+main.obj : error LNK2019: símbolo externo indefinido "void __cdecl std::_Debug_message(wchar_t const *,wchar_t const *,unsigned int)" (?_Debug_message@std@@YAXPB_W0I@Z) referenciado na função "bool __cdecl std::_Debug_lt_pred<struct std::less<void> &,char * &,char * &>(struct std::less<void> &,char * &,char * &,wchar_t const *,unsigned int)" (??$_Debug_lt_pred@AAU?$less@X@std@@AAPADAAPAD@std@@YA_NAAU?$less@X@0@AAPAD1PB_WI@Z)
+mesh.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Debug_message(wchar_t const *,wchar_t const *,unsigned int)" (?_Debug_message@std@@YAXPB_W0I@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Debug_message(wchar_t const *,wchar_t const *,unsigned int)" (?_Debug_message@std@@YAXPB_W0I@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Debug_message(wchar_t const *,wchar_t const *,unsigned int)" (?_Debug_message@std@@YAXPB_W0I@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Xbad_alloc(void)" (?_Xbad_alloc@std@@YAXXZ)
+main.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Xbad_alloc(void)" (?_Xbad_alloc@std@@YAXXZ)
+glError.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Xbad_alloc(void)" (?_Xbad_alloc@std@@YAXXZ)
+mesh.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Xbad_alloc(void)" (?_Xbad_alloc@std@@YAXXZ)
+model.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Xbad_alloc(void)" (?_Xbad_alloc@std@@YAXXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Xlength_error(char const *)" (?_Xlength_error@std@@YAXPBD@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Xlength_error(char const *)" (?_Xlength_error@std@@YAXPBD@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Xlength_error(char const *)" (?_Xlength_error@std@@YAXPBD@Z)
+mesh.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Xlength_error(char const *)" (?_Xlength_error@std@@YAXPBD@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Xlength_error(char const *)" (?_Xlength_error@std@@YAXPBD@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: bool __thiscall std::ios_base::good(void)const " (__imp_?good@ios_base@std@@QBE_NXZ)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: bool __thiscall std::ios_base::good(void)const " (__imp_?good@ios_base@std@@QBE_NXZ)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: bool __thiscall std::ios_base::good(void)const " (__imp_?good@ios_base@std@@QBE_NXZ)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: bool __thiscall std::ios_base::good(void)const " (__imp_?good@ios_base@std@@QBE_NXZ)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: bool __thiscall std::ios_base::good(void)const " (__imp_?good@ios_base@std@@QBE_NXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: int __thiscall std::ios_base::flags(void)const " (__imp_?flags@ios_base@std@@QBEHXZ)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: int __thiscall std::ios_base::flags(void)const " (__imp_?flags@ios_base@std@@QBEHXZ)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: int __thiscall std::ios_base::flags(void)const " (__imp_?flags@ios_base@std@@QBEHXZ)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: int __thiscall std::ios_base::flags(void)const " (__imp_?flags@ios_base@std@@QBEHXZ)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: int __thiscall std::ios_base::flags(void)const " (__imp_?flags@ios_base@std@@QBEHXZ)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: __int64 __thiscall std::ios_base::width(void)const " (__imp_?width@ios_base@std@@QBE_JXZ) referenciado na função "void * __cdecl std::_Allocate(unsigned int,unsigned int,bool)" (?_Allocate@std@@YAPAXII_N@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::ios_base::width(void)const " (__imp_?width@ios_base@std@@QBE_JXZ)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::ios_base::width(void)const " (__imp_?width@ios_base@std@@QBE_JXZ)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::ios_base::width(void)const " (__imp_?width@ios_base@std@@QBE_JXZ)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::ios_base::width(void)const " (__imp_?width@ios_base@std@@QBE_JXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::ios_base::width(__int64)" (__imp_?width@ios_base@std@@QAE_J_J@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::ios_base::width(__int64)" (__imp_?width@ios_base@std@@QAE_J_J@Z)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::ios_base::width(__int64)" (__imp_?width@ios_base@std@@QAE_J_J@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::ios_base::width(__int64)" (__imp_?width@ios_base@std@@QAE_J_J@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::ios_base::width(__int64)" (__imp_?width@ios_base@std@@QAE_J_J@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: int __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sputc(char)" (__imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: int __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sputc(char)" (__imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: int __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sputc(char)" (__imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: int __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sputc(char)" (__imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: int __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sputc(char)" (__imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sputn(char const *,__int64)" (__imp_?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAE_JPBD_J@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sputn(char const *,__int64)" (__imp_?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAE_JPBD_J@Z)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sputn(char const *,__int64)" (__imp_?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAE_JPBD_J@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sputn(char const *,__int64)" (__imp_?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAE_JPBD_J@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sputn(char const *,__int64)" (__imp_?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAE_JPBD_J@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: void __thiscall std::basic_ios<char,struct std::char_traits<char> >::setstate(int,bool)" (__imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z) referenciado na função "void * __cdecl std::_Allocate(unsigned int,unsigned int,bool)" (?_Allocate@std@@YAPAXII_N@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: void __thiscall std::basic_ios<char,struct std::char_traits<char> >::setstate(int,bool)" (__imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: void __thiscall std::basic_ios<char,struct std::char_traits<char> >::setstate(int,bool)" (__imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: void __thiscall std::basic_ios<char,struct std::char_traits<char> >::setstate(int,bool)" (__imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: void __thiscall std::basic_ios<char,struct std::char_traits<char> >::setstate(int,bool)" (__imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::tie(void)const " (__imp_?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::tie(void)const " (__imp_?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::tie(void)const " (__imp_?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::tie(void)const " (__imp_?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::tie(void)const " (__imp_?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_streambuf<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::rdbuf(void)const " (__imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_streambuf<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::rdbuf(void)const " (__imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_streambuf<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::rdbuf(void)const " (__imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_streambuf<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::rdbuf(void)const " (__imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_streambuf<char,struct std::char_traits<char> > * __thiscall std::basic_ios<char,struct std::char_traits<char> >::rdbuf(void)const " (__imp_?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: char __thiscall std::basic_ios<char,struct std::char_traits<char> >::fill(void)const " (__imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDXZ)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: char __thiscall std::basic_ios<char,struct std::char_traits<char> >::fill(void)const " (__imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDXZ)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: char __thiscall std::basic_ios<char,struct std::char_traits<char> >::fill(void)const " (__imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDXZ)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: char __thiscall std::basic_ios<char,struct std::char_traits<char> >::fill(void)const " (__imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDXZ)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: char __thiscall std::basic_ios<char,struct std::char_traits<char> >::fill(void)const " (__imp_?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDXZ)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: char __thiscall std::basic_ios<char,struct std::char_traits<char> >::widen(char)const " (__imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z) referenciado na função "void * __cdecl std::_Allocate(unsigned int,unsigned int,bool)" (?_Allocate@std@@YAPAXII_N@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: char __thiscall std::basic_ios<char,struct std::char_traits<char> >::widen(char)const " (__imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: char __thiscall std::basic_ios<char,struct std::char_traits<char> >::widen(char)const " (__imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: char __thiscall std::basic_ios<char,struct std::char_traits<char> >::widen(char)const " (__imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: char __thiscall std::basic_ios<char,struct std::char_traits<char> >::widen(char)const " (__imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QBEDD@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: void __thiscall std::basic_ostream<char,struct std::char_traits<char> >::_Osfx(void)" (__imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: void __thiscall std::basic_ostream<char,struct std::char_traits<char> >::_Osfx(void)" (__imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: void __thiscall std::basic_ostream<char,struct std::char_traits<char> >::_Osfx(void)" (__imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: void __thiscall std::basic_ostream<char,struct std::char_traits<char> >::_Osfx(void)" (__imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: void __thiscall std::basic_ostream<char,struct std::char_traits<char> >::_Osfx(void)" (__imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(class std::basic_ostream<char,struct std::char_traits<char> > & (__cdecl*)(class std::basic_ostream<char,struct std::char_traits<char> > &))" (__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(class std::basic_ostream<char,struct std::char_traits<char> > & (__cdecl*)(class std::basic_ostream<char,struct std::char_traits<char> > &))" (__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(class std::basic_ostream<char,struct std::char_traits<char> > & (__cdecl*)(class std::basic_ostream<char,struct std::char_traits<char> > &))" (__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(class std::basic_ostream<char,struct std::char_traits<char> > & (__cdecl*)(class std::basic_ostream<char,struct std::char_traits<char> > &))" (__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(class std::basic_ostream<char,struct std::char_traits<char> > & (__cdecl*)(class std::basic_ostream<char,struct std::char_traits<char> > &))" (__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z)
+main.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)" (__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z) referenciado na função "void __cdecl createVBOs(struct aiScene const *)" (?createVBOs@@YAXPBUaiScene@@@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)" (__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z)
+main.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(unsigned int)" (__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z) referenciado na função "void __cdecl createVBOs(struct aiScene const *)" (?createVBOs@@YAXPBUaiScene@@@Z)
+mesh.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(unsigned int)" (__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z)
+main.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(float)" (__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@M@Z) referenciado na função "void __cdecl loadMesh(char *)" (?loadMesh@@YAXPAD@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::put(char)" (__imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::put(char)" (__imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::put(char)" (__imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::put(char)" (__imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::put(char)" (__imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::flush(void)" (__imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ)
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::flush(void)" (__imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::flush(void)" (__imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::flush(void)" (__imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::flush(void)" (__imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ)
+main.obj : error LNK2019: símbolo externo indefinido __imp___wassert referenciado na função "struct glm::tmat4x4<double,0> __cdecl glm::perspective<double>(double,double,double,double)" (??$perspective@N@glm@@YA?AU?$tmat4x4@N$0A@@0@NNNN@Z)
+model.obj : error LNK2001: símbolos externos indefinidos @_RTC_CheckStackVars@8
+shader.obj : error LNK2001: símbolos externos indefinidos @_RTC_CheckStackVars@8
+main.obj : error LNK2001: símbolos externos indefinidos @_RTC_CheckStackVars@8
+initShaders.obj : error LNK2001: símbolos externos indefinidos @_RTC_CheckStackVars@8
+glError.obj : error LNK2001: símbolos externos indefinidos @_RTC_CheckStackVars@8
+mesh.obj : error LNK2001: símbolos externos indefinidos @_RTC_CheckStackVars@8
+glfw3.lib(win32_window.c.obj) : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+glfw3.lib(win32_joystick.c.obj) : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+glfw3.lib(wgl_context.c.obj) : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+glfw3.lib(egl_context.c.obj) : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+glfw3.lib(context.c.obj) : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+glfw3.lib(win32_init.c.obj) : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+glfw3.lib(win32_monitor.c.obj) : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+glfw3.lib(monitor.c.obj) : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+model.obj : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+shader.obj : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+glfw3.lib(init.c.obj) : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+glfw3.lib(window.c.obj) : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+main.obj : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+initShaders.obj : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+glError.obj : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+mesh.obj : error LNK2001: símbolos externos indefinidos @__security_check_cookie@4
+main.obj : error LNK2019: símbolo externo indefinido __CxxThrowException@8 referenciado na função __catch$??$emplace_back@ABM@?$vector@MV?$allocator@M@std@@@std@@QAE@ABM@Z$0
+mesh.obj : error LNK2001: símbolos externos indefinidos __CxxThrowException@8
+model.obj : error LNK2001: símbolos externos indefinidos __CxxThrowException@8
+shader.obj : error LNK2001: símbolos externos indefinidos __CxxThrowException@8
+model.obj : error LNK2001: símbolos externos indefinidos __RTC_CheckEsp
+shader.obj : error LNK2001: símbolos externos indefinidos __RTC_CheckEsp
+main.obj : error LNK2001: símbolos externos indefinidos __RTC_CheckEsp
+initShaders.obj : error LNK2001: símbolos externos indefinidos __RTC_CheckEsp
+glError.obj : error LNK2001: símbolos externos indefinidos __RTC_CheckEsp
+mesh.obj : error LNK2001: símbolos externos indefinidos __RTC_CheckEsp
+model.obj : error LNK2001: símbolos externos indefinidos __RTC_InitBase
+shader.obj : error LNK2001: símbolos externos indefinidos __RTC_InitBase
+main.obj : error LNK2001: símbolos externos indefinidos __RTC_InitBase
+initShaders.obj : error LNK2001: símbolos externos indefinidos __RTC_InitBase
+glError.obj : error LNK2001: símbolos externos indefinidos __RTC_InitBase
+mesh.obj : error LNK2001: símbolos externos indefinidos __RTC_InitBase
+model.obj : error LNK2001: símbolos externos indefinidos __RTC_Shutdown
+shader.obj : error LNK2001: símbolos externos indefinidos __RTC_Shutdown
+main.obj : error LNK2001: símbolos externos indefinidos __RTC_Shutdown
+initShaders.obj : error LNK2001: símbolos externos indefinidos __RTC_Shutdown
+glError.obj : error LNK2001: símbolos externos indefinidos __RTC_Shutdown
+mesh.obj : error LNK2001: símbolos externos indefinidos __RTC_Shutdown
+model.obj : error LNK2001: símbolos externos indefinidos ___CxxFrameHandler3
+shader.obj : error LNK2001: símbolos externos indefinidos ___CxxFrameHandler3
+main.obj : error LNK2001: símbolos externos indefinidos ___CxxFrameHandler3
+initShaders.obj : error LNK2001: símbolos externos indefinidos ___CxxFrameHandler3
+glError.obj : error LNK2001: símbolos externos indefinidos ___CxxFrameHandler3
+mesh.obj : error LNK2001: símbolos externos indefinidos ___CxxFrameHandler3
+shader.obj : error LNK2001: símbolos externos indefinidos _memcpy
+main.obj : error LNK2001: símbolos externos indefinidos _memcpy
+glError.obj : error LNK2001: símbolos externos indefinidos _memcpy
+mesh.obj : error LNK2001: símbolos externos indefinidos _memcpy
+model.obj : error LNK2001: símbolos externos indefinidos _memcpy
+glfw3.lib(win32_init.c.obj) : error LNK2001: símbolos externos indefinidos _memset
+glfw3.lib(win32_monitor.c.obj) : error LNK2001: símbolos externos indefinidos _memset
+glfw3.lib(win32_window.c.obj) : error LNK2001: símbolos externos indefinidos _memset
+glfw3.lib(win32_joystick.c.obj) : error LNK2001: símbolos externos indefinidos _memset
+shader.obj : error LNK2001: símbolos externos indefinidos _memset
+shader.obj : error LNK2001: símbolos externos indefinidos _memset
+glfw3.lib(init.c.obj) : error LNK2001: símbolos externos indefinidos _memset
+glfw3.lib(window.c.obj) : error LNK2001: símbolos externos indefinidos _memset
+main.obj : error LNK2001: símbolos externos indefinidos _memset
+mesh.obj : error LNK2001: símbolos externos indefinidos _memset
+model.obj : error LNK2001: símbolos externos indefinidos _memset
+model.obj : error LNK2001: símbolos externos indefinidos _memset
+main.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) class std::basic_ostream<char,struct std::char_traits<char> > std::cout" (__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A)
+model.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) class std::basic_ostream<char,struct std::char_traits<char> > std::cout" (__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) class std::basic_ostream<char,struct std::char_traits<char> > std::cout" (__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A)
+glfw3.lib(win32_window.c.obj) : error LNK2001: símbolos externos indefinidos ___security_cookie
+glfw3.lib(win32_joystick.c.obj) : error LNK2001: símbolos externos indefinidos ___security_cookie
+glfw3.lib(wgl_context.c.obj) : error LNK2001: símbolos externos indefinidos ___security_cookie
+glfw3.lib(egl_context.c.obj) : error LNK2001: símbolos externos indefinidos ___security_cookie
+glfw3.lib(context.c.obj) : error LNK2001: símbolos externos indefinidos ___security_cookie
+glfw3.lib(win32_init.c.obj) : error LNK2001: símbolos externos indefinidos ___security_cookie
+glfw3.lib(win32_monitor.c.obj) : error LNK2001: símbolos externos indefinidos ___security_cookie
+glfw3.lib(monitor.c.obj) : error LNK2001: símbolos externos indefinidos ___security_cookie
+model.obj : error LNK2001: símbolos externos indefinidos ___security_cookie
+shader.obj : error LNK2001: símbolos externos indefinidos ___security_cookie
+glfw3.lib(init.c.obj) : error LNK2001: símbolos externos indefinidos ___security_cookie
+glfw3.lib(window.c.obj) : error LNK2001: símbolos externos indefinidos ___security_cookie
+main.obj : error LNK2001: símbolos externos indefinidos ___security_cookie
+initShaders.obj : error LNK2001: símbolos externos indefinidos ___security_cookie
+glError.obj : error LNK2001: símbolos externos indefinidos ___security_cookie
+mesh.obj : error LNK2001: símbolos externos indefinidos ___security_cookie
+glfw3.lib(input.c.obj) : error LNK2001: símbolos externos indefinidos __fltused
+glfw3.lib(monitor.c.obj) : error LNK2001: símbolos externos indefinidos __fltused
+glfw3.lib(win32_window.c.obj) : error LNK2001: símbolos externos indefinidos __fltused
+glfw3.lib(win32_joystick.c.obj) : error LNK2001: símbolos externos indefinidos __fltused
+main.obj : error LNK2001: símbolos externos indefinidos __fltused
+mesh.obj : error LNK2001: símbolos externos indefinidos __fltused
+model.obj : error LNK2001: símbolos externos indefinidos __fltused
+glfw3.lib(window.c.obj) : error LNK2001: símbolos externos indefinidos __fltused
+initShaders.obj : error LNK2019: símbolo externo indefinido "void * __cdecl operator new[](unsigned int)" (??_U@YAPAXI@Z) referenciado na função "unsigned int __cdecl InitShader(char const *,char const *)" (?InitShader@@YAIPBD0@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "void * __cdecl operator new[](unsigned int)" (??_U@YAPAXI@Z)
+initShaders.obj : error LNK2019: símbolo externo indefinido "void __cdecl operator delete[](void *)" (??_V@YAXPAX@Z) referenciado na função "unsigned int __cdecl InitShader(char const *,char const *)" (?InitShader@@YAIPBD0@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "void __cdecl operator delete[](void *)" (??_V@YAXPAX@Z)
+initShaders.obj : error LNK2019: símbolo externo indefinido __imp__fclose referenciado na função "char * __cdecl readShaderSource(char const *)" (?readShaderSource@@YAPADPBD@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos __imp__fclose
+initShaders.obj : error LNK2019: símbolo externo indefinido __imp__fopen referenciado na função "char * __cdecl readShaderSource(char const *)" (?readShaderSource@@YAPADPBD@Z)
+initShaders.obj : error LNK2019: símbolo externo indefinido __imp__fread referenciado na função "char * __cdecl readShaderSource(char const *)" (?readShaderSource@@YAPADPBD@Z)
+initShaders.obj : error LNK2019: símbolo externo indefinido __imp__fseek referenciado na função "char * __cdecl readShaderSource(char const *)" (?readShaderSource@@YAPADPBD@Z)
+initShaders.obj : error LNK2019: símbolo externo indefinido __imp__ftell referenciado na função "char * __cdecl readShaderSource(char const *)" (?readShaderSource@@YAPADPBD@Z)
+initShaders.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) class std::basic_ostream<char,struct std::char_traits<char> > std::cerr" (__imp_?cerr@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A)
+glError.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) class std::basic_ostream<char,struct std::char_traits<char> > std::cerr" (__imp_?cerr@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A)
+mesh.obj : error LNK2019: símbolo externo indefinido "void __cdecl operator delete(void *,unsigned int)" (??3@YAXPAXI@Z) referenciado na função "public: virtual void * __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::`scalar deleting destructor'(unsigned int)" (??_G?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UAEPAXI@Z)
+model.obj : error LNK2001: símbolos externos indefinidos "void __cdecl operator delete(void *,unsigned int)" (??3@YAXPAXI@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "void __cdecl operator delete(void *,unsigned int)" (??3@YAXPAXI@Z)
+mesh.obj : error LNK2019: símbolo externo indefinido _memcmp referenciado na função "public: static int __cdecl std::char_traits<char>::compare(char const * const,char const * const,unsigned int)" (?compare@?$char_traits@D@std@@SAHQBD0I@Z)
+model.obj : error LNK2001: símbolos externos indefinidos _memcmp
+shader.obj : error LNK2001: símbolos externos indefinidos _memcmp
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::basic_streambuf<char,struct std::char_traits<char> >(void)" (__imp_??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAE@XZ) referenciado na função "public: __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >(int)" (??0?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@H@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::basic_streambuf<char,struct std::char_traits<char> >(void)" (__imp_??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAE@XZ)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: virtual __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::~basic_streambuf<char,struct std::char_traits<char> >(void)" (__imp_??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAE@XZ) referenciado na função __unwindfunclet$??0?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@H@Z$0
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: virtual __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::~basic_streambuf<char,struct std::char_traits<char> >(void)" (__imp_??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAE@XZ)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::eback(void)const " (__imp_?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ) referenciado na função "protected: void __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::_Tidy(void)" (?_Tidy@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::eback(void)const " (__imp_?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::gptr(void)const " (__imp_?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ) referenciado na função "protected: void __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::_Init(char const *,unsigned int,int)" (?_Init@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXPBDIH@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::gptr(void)const " (__imp_?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::pbase(void)const " (__imp_?pbase@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ) referenciado na função "protected: virtual int __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::overflow(int)" (?overflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::pbase(void)const " (__imp_?pbase@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::pptr(void)const " (__imp_?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ) referenciado na função "protected: void __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::_Tidy(void)" (?_Tidy@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::pptr(void)const " (__imp_?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::egptr(void)const " (__imp_?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ) referenciado na função "protected: void __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::_Tidy(void)" (?_Tidy@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::egptr(void)const " (__imp_?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::gbump(int)" (__imp_?gbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXH@Z) referenciado na função "protected: virtual int __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::pbackfail(int)" (?pbackfail@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::gbump(int)" (__imp_?gbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXH@Z)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::setg(char *,char *,char *)" (__imp_?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z) referenciado na função "protected: void __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::_Init(char const *,unsigned int,int)" (?_Init@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXPBDIH@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::setg(char *,char *,char *)" (__imp_?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::epptr(void)const " (__imp_?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ) referenciado na função "protected: void __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::_Tidy(void)" (?_Tidy@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::epptr(void)const " (__imp_?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IBEPADXZ)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::pbump(int)" (__imp_?pbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXH@Z) referenciado na função "protected: virtual class std::fpos<struct _Mbstatet> __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::seekoff(__int64,int,int)" (?seekoff@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::pbump(int)" (__imp_?pbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXH@Z)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::setp(char *,char *)" (__imp_?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD0@Z) referenciado na função "protected: void __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::_Tidy(void)" (?_Tidy@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::setp(char *,char *)" (__imp_?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD0@Z)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::setp(char *,char *,char *)" (__imp_?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z) referenciado na função "protected: void __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::_Init(char const *,unsigned int,int)" (?_Init@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IAEXPBDIH@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::setp(char *,char *,char *)" (__imp_?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAD00@Z)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Pninc(void)" (__imp_?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ) referenciado na função "protected: virtual int __thiscall std::basic_stringbuf<char,struct std::char_traits<char>,class std::allocator<char> >::overflow(int)" (?overflow@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@MAEHH@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Pninc(void)" (__imp_?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: virtual __thiscall std::basic_ios<char,struct std::char_traits<char> >::~basic_ios<char,struct std::char_traits<char> >(void)" (__imp_??1?$basic_ios@DU?$char_traits@D@std@@@std@@UAE@XZ) referenciado na função __unwindfunclet$??0?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@H@Z$0
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: virtual __thiscall std::basic_ios<char,struct std::char_traits<char> >::~basic_ios<char,struct std::char_traits<char> >(void)" (__imp_??1?$basic_ios@DU?$char_traits@D@std@@@std@@UAE@XZ)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: __thiscall std::basic_ios<char,struct std::char_traits<char> >::basic_ios<char,struct std::char_traits<char> >(void)" (__imp_??0?$basic_ios@DU?$char_traits@D@std@@@std@@IAE@XZ) referenciado na função "public: __thiscall std::basic_stringstream<char,struct std::char_traits<char>,class std::allocator<char> >::basic_stringstream<char,struct std::char_traits<char>,class std::allocator<char> >(int)" (??0?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@H@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) protected: __thiscall std::basic_ios<char,struct std::char_traits<char> >::basic_ios<char,struct std::char_traits<char> >(void)" (__imp_??0?$basic_ios@DU?$char_traits@D@std@@@std@@IAE@XZ)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: __thiscall std::basic_iostream<char,struct std::char_traits<char> >::basic_iostream<char,struct std::char_traits<char> >(class std::basic_streambuf<char,struct std::char_traits<char> > *)" (__imp_??0?$basic_iostream@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@@Z) referenciado na função "public: __thiscall std::basic_stringstream<char,struct std::char_traits<char>,class std::allocator<char> >::basic_stringstream<char,struct std::char_traits<char>,class std::allocator<char> >(int)" (??0?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@H@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: __thiscall std::basic_iostream<char,struct std::char_traits<char> >::basic_iostream<char,struct std::char_traits<char> >(class std::basic_streambuf<char,struct std::char_traits<char> > *)" (__imp_??0?$basic_iostream@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@@Z)
+mesh.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: virtual __thiscall std::basic_iostream<char,struct std::char_traits<char> >::~basic_iostream<char,struct std::char_traits<char> >(void)" (__imp_??1?$basic_iostream@DU?$char_traits@D@std@@@std@@UAE@XZ) referenciado na função __unwindfunclet$??0?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@H@Z$1
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: virtual __thiscall std::basic_iostream<char,struct std::char_traits<char> >::~basic_iostream<char,struct std::char_traits<char> >(void)" (__imp_??1?$basic_iostream@DU?$char_traits@D@std@@@std@@UAE@XZ)
+mesh.obj : error LNK2001: símbolos externos indefinidos "public: virtual void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Lock(void)" (?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEXXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "public: virtual void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Lock(void)" (?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEXXZ)
+mesh.obj : error LNK2001: símbolos externos indefinidos "public: virtual void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Unlock(void)" (?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEXXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "public: virtual void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Unlock(void)" (?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEXXZ)
+mesh.obj : error LNK2001: símbolos externos indefinidos "protected: virtual void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::imbue(class std::locale const &)" (?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEXABVlocale@2@@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "protected: virtual void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::imbue(class std::locale const &)" (?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEXABVlocale@2@@Z)
+mesh.obj : error LNK2001: símbolos externos indefinidos "protected: virtual class std::basic_streambuf<char,struct std::char_traits<char> > * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::setbuf(char *,__int64)" (?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEPAV12@PAD_J@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "protected: virtual class std::basic_streambuf<char,struct std::char_traits<char> > * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::setbuf(char *,__int64)" (?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEPAV12@PAD_J@Z)
+mesh.obj : error LNK2001: símbolos externos indefinidos "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::showmanyc(void)" (?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::showmanyc(void)" (?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JXZ)
+mesh.obj : error LNK2001: símbolos externos indefinidos "protected: virtual int __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sync(void)" (?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "protected: virtual int __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::sync(void)" (?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHXZ)
+mesh.obj : error LNK2001: símbolos externos indefinidos "protected: virtual int __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::uflow(void)" (?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "protected: virtual int __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::uflow(void)" (?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHXZ)
+mesh.obj : error LNK2001: símbolos externos indefinidos "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::xsgetn(char *,__int64)" (?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPAD_J@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::xsgetn(char *,__int64)" (?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPAD_J@Z)
+mesh.obj : error LNK2001: símbolos externos indefinidos "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::xsputn(char const *,__int64)" (?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPBD_J@Z)
+shader.obj : error LNK2001: símbolos externos indefinidos "protected: virtual __int64 __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::xsputn(char const *,__int64)" (?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPBD_J@Z)
+mesh.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) __int64 const std::_BADOFF" (__imp_?_BADOFF@std@@3_JB)
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) __int64 const std::_BADOFF" (__imp_?_BADOFF@std@@3_JB)
+mesh.obj : error LNK2001: símbolos externos indefinidos "const type_info::`vftable'" (??_7type_info@@6B@)
+shader.obj : error LNK2001: símbolos externos indefinidos "const type_info::`vftable'" (??_7type_info@@6B@)
+model.obj : error LNK2019: símbolo externo indefinido "void __cdecl std::_Xout_of_range(char const *)" (?_Xout_of_range@std@@YAXPBD@Z) referenciado na função "public: static void __cdecl std::_String_val<struct std::_Simple_types<char> >::_Xran(void)" (?_Xran@?$_String_val@U?$_Simple_types@D@std@@@std@@SAXXZ)
+shader.obj : error LNK2001: símbolos externos indefinidos "void __cdecl std::_Xout_of_range(char const *)" (?_Xout_of_range@std@@YAXPBD@Z)
+shader.obj : error LNK2019: símbolo externo indefinido __imp___invalid_parameter_noinfo referenciado na função _memcpy_s
+shader.obj : error LNK2019: símbolo externo indefinido __imp___errno referenciado na função _memcpy_s
+shader.obj : error LNK2019: símbolo externo indefinido __imp___get_stream_buffer_pointers referenciado na função "protected: void __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::_Init(struct _iobuf *,enum std::basic_filebuf<char,struct std::char_traits<char> >::_Initfl)" (?_Init@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXPAU_iobuf@@W4_Initfl@12@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido __imp__fgetc referenciado na função "bool __cdecl std::_Fgetc<char>(char &,struct _iobuf *)" (??$_Fgetc@D@std@@YA_NAADPAU_iobuf@@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido __imp__fgetpos referenciado na função "protected: virtual class std::fpos<struct _Mbstatet> __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::seekoff(__int64,int,int)" (?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z)
+shader.obj : error LNK2019: símbolo externo indefinido __imp__fputc referenciado na função "bool __cdecl std::_Fputc<char>(char,struct _iobuf *)" (??$_Fputc@D@std@@YA_NDPAU_iobuf@@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido __imp__fsetpos referenciado na função "protected: virtual class std::fpos<struct _Mbstatet> __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::seekpos(class std::fpos<struct _Mbstatet>,int)" (?seekpos@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@V32@H@Z)
+shader.obj : error LNK2019: símbolo externo indefinido __imp___fseeki64 referenciado na função "protected: virtual class std::fpos<struct _Mbstatet> __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::seekoff(__int64,int,int)" (?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z)
+shader.obj : error LNK2019: símbolo externo indefinido __imp__fwrite referenciado na função "protected: bool __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::_Endwrite(void)" (?_Endwrite@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAE_NXZ)
+shader.obj : error LNK2019: símbolo externo indefinido __imp__setvbuf referenciado na função "protected: virtual class std::basic_streambuf<char,struct std::char_traits<char> > * __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::setbuf(char *,__int64)" (?setbuf@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@PAD_J@Z)
+shader.obj : error LNK2019: símbolo externo indefinido __imp__ungetc referenciado na função "bool __cdecl std::_Ungetc<char>(char const &,struct _iobuf *)" (??$_Ungetc@D@std@@YA_NABDPAU_iobuf@@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido __imp___lock_file referenciado na função "public: virtual void __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::_Lock(void)" (?_Lock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ)
+shader.obj : error LNK2019: símbolo externo indefinido __imp___unlock_file referenciado na função "public: virtual void __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::_Unlock(void)" (?_Unlock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ)
+shader.obj : error LNK2019: símbolo externo indefinido ___std_exception_copy referenciado na função "public: __thiscall std::exception::exception(class std::exception const &)" (??0exception@std@@QAE@ABV01@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido ___std_exception_destroy referenciado na função "public: virtual __thiscall std::exception::~exception(void)" (??1exception@std@@UAE@XZ)
+shader.obj : error LNK2019: símbolo externo indefinido "void __cdecl std::_Facet_Register(class std::_Facet_base *)" (?_Facet_Register@std@@YAXPAV_Facet_base@1@@Z) referenciado na função "class std::codecvt<char,char,struct _Mbstatet> const & __cdecl std::use_facet<class std::codecvt<char,char,struct _Mbstatet> >(class std::locale const &)" (??$use_facet@V?$codecvt@DDU_Mbstatet@@@std@@@std@@YAABV?$codecvt@DDU_Mbstatet@@@0@ABVlocale@0@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: __thiscall std::locale::id::operator unsigned int(void)" (__imp_??Bid@locale@std@@QAEIXZ) referenciado na função "class std::codecvt<char,char,struct _Mbstatet> const & __cdecl std::use_facet<class std::codecvt<char,char,struct _Mbstatet> >(class std::locale const &)" (??$use_facet@V?$codecvt@DDU_Mbstatet@@@std@@@std@@YAABV?$codecvt@DDU_Mbstatet@@@0@ABVlocale@0@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "private: static class std::locale::_Locimp * __cdecl std::locale::_Getgloballocale(void)" (?_Getgloballocale@locale@std@@CAPAV_Locimp@12@XZ) referenciado na função "public: class std::locale::facet const * __thiscall std::locale::_Getfacet(unsigned int)const " (?_Getfacet@locale@std@@QBEPBVfacet@12@I@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: bool __thiscall std::codecvt_base::always_noconv(void)const " (__imp_?always_noconv@codecvt_base@std@@QBE_NXZ) referenciado na função "protected: void __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::_Initcvt(class std::codecvt<char,char,struct _Mbstatet> const *)" (?_Initcvt@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXPBV?$codecvt@DDU_Mbstatet@@@2@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: int __thiscall std::codecvt<char,char,struct _Mbstatet>::in(struct _Mbstatet &,char const *,char const *,char const * &,char *,char *,char * &)const " (__imp_?in@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z) referenciado na função "protected: virtual int __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::uflow(void)" (?uflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: int __thiscall std::codecvt<char,char,struct _Mbstatet>::out(struct _Mbstatet &,char const *,char const *,char const * &,char *,char *,char * &)const " (__imp_?out@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z) referenciado na função "protected: virtual int __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::overflow(int)" (?overflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: int __thiscall std::codecvt<char,char,struct _Mbstatet>::unshift(struct _Mbstatet &,char *,char *,char * &)const " (__imp_?unshift@?$codecvt@DDU_Mbstatet@@@std@@QBEHAAU_Mbstatet@@PAD1AAPAD@Z) referenciado na função "protected: bool __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::_Endwrite(void)" (?_Endwrite@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAE_NXZ)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: static unsigned int __cdecl std::codecvt<char,char,struct _Mbstatet>::_Getcat(class std::locale::facet const * *,class std::locale const *)" (__imp_?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@SAIPAPBVfacet@locale@2@PBV42@@Z) referenciado na função "class std::codecvt<char,char,struct _Mbstatet> const & __cdecl std::use_facet<class std::codecvt<char,char,struct _Mbstatet> >(class std::locale const &)" (??$use_facet@V?$codecvt@DDU_Mbstatet@@@std@@@std@@YAABV?$codecvt@DDU_Mbstatet@@@0@ABVlocale@0@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: void __thiscall std::ios_base::exceptions(int)" (__imp_?exceptions@ios_base@std@@QAEXH@Z) referenciado na função "public: __thiscall Shader::Shader(char const *,char const *,char const *)" (??0Shader@@QAE@PBD00@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: class std::locale __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::getloc(void)const " (__imp_?getloc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QBE?AVlocale@2@XZ) referenciado na função "public: class std::basic_filebuf<char,struct std::char_traits<char> > * __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::open(char const *,int,int)" (?open@?$basic_filebuf@DU?$char_traits@D@std@@@std@@QAEPAV12@PBDHH@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Gndec(void)" (__imp_?_Gndec@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ) referenciado na função "protected: virtual int __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::pbackfail(int)" (?pbackfail@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: char * __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Gninc(void)" (__imp_?_Gninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEPADXZ) referenciado na função "protected: virtual int __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::uflow(void)" (?uflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHXZ)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Init(void)" (__imp_?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXXZ) referenciado na função "protected: void __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::_Init(struct _iobuf *,enum std::basic_filebuf<char,struct std::char_traits<char> >::_Initfl)" (?_Init@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXPAU_iobuf@@W4_Initfl@12@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) protected: void __thiscall std::basic_streambuf<char,struct std::char_traits<char> >::_Init(char * *,char * *,int *,char * *,char * *,int *)" (__imp_?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IAEXPAPAD0PAH001@Z) referenciado na função "protected: void __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::_Init(struct _iobuf *,enum std::basic_filebuf<char,struct std::char_traits<char> >::_Initfl)" (?_Init@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXPAU_iobuf@@W4_Initfl@12@@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: void __thiscall std::basic_ios<char,struct std::char_traits<char> >::clear(int,bool)" (__imp_?clear@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z) referenciado na função "public: void __thiscall std::basic_ifstream<char,struct std::char_traits<char> >::open(char const *,int,int)" (?open@?$basic_ifstream@DU?$char_traits@D@std@@@std@@QAEXPBDHH@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(class std::basic_streambuf<char,struct std::char_traits<char> > *)" (__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@@Z) referenciado na função "public: __thiscall Shader::Shader(char const *,char const *,char const *)" (??0Shader@@QAE@PBD00@Z)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: __thiscall std::basic_istream<char,struct std::char_traits<char> >::basic_istream<char,struct std::char_traits<char> >(class std::basic_streambuf<char,struct std::char_traits<char> > *,bool)" (__imp_??0?$basic_istream@DU?$char_traits@D@std@@@std@@QAE@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z) referenciado na função "public: __thiscall std::basic_ifstream<char,struct std::char_traits<char> >::basic_ifstream<char,struct std::char_traits<char> >(void)" (??0?$basic_ifstream@DU?$char_traits@D@std@@@std@@QAE@XZ)
+shader.obj : error LNK2019: símbolo externo indefinido "__declspec(dllimport) public: virtual __thiscall std::basic_istream<char,struct std::char_traits<char> >::~basic_istream<char,struct std::char_traits<char> >(void)" (__imp_??1?$basic_istream@DU?$char_traits@D@std@@@std@@UAE@XZ) referenciado na função __unwindfunclet$??0?$basic_ifstream@DU?$char_traits@D@std@@@std@@QAE@XZ$1
+shader.obj : error LNK2019: símbolo externo indefinido "struct _iobuf * __cdecl std::_Fiopen(char const *,int,int)" (?_Fiopen@std@@YAPAU_iobuf@@PBDHH@Z) referenciado na função "public: class std::basic_filebuf<char,struct std::char_traits<char> > * __thiscall std::basic_filebuf<char,struct std::char_traits<char> >::open(char const *,int,int)" (?open@?$basic_filebuf@DU?$char_traits@D@std@@@std@@QAEPAV12@PBDHH@Z)
+shader.obj : error LNK2019: símbolo externo indefinido __RTC_UninitUse referenciado na função __catch$??0Shader@@QAE@PBD00@Z$0
+shader.obj : error LNK2001: símbolos externos indefinidos "__declspec(dllimport) public: static class std::locale::id std::codecvt<char,char,struct _Mbstatet>::id" (__imp_?id@?$codecvt@DDU_Mbstatet@@@std@@2V0locale@2@A)
+LINK : error LNK2001: símbolos externos indefinidos _mainCRTStartup
+glfw3.lib(init.c.obj) : error LNK2019: símbolo externo indefinido __chkstk referenciado na função __glfwInputError
+glfw3.lib(wgl_context.c.obj) : error LNK2001: símbolos externos indefinidos __imp__calloc
+glfw3.lib(egl_context.c.obj) : error LNK2001: símbolos externos indefinidos __imp__calloc
+glfw3.lib(monitor.c.obj) : error LNK2001: símbolos externos indefinidos __imp__calloc
+glfw3.lib(vulkan.c.obj) : error LNK2001: símbolos externos indefinidos __imp__calloc
+glfw3.lib(win32_window.c.obj) : error LNK2001: símbolos externos indefinidos __imp__calloc
+glfw3.lib(win32_joystick.c.obj) : error LNK2001: símbolos externos indefinidos __imp__calloc
+glfw3.lib(window.c.obj) : error LNK2001: símbolos externos indefinidos __imp__calloc
+glfw3.lib(input.c.obj) : error LNK2001: símbolos externos indefinidos __imp__calloc
+glfw3.lib(win32_init.c.obj) : error LNK2001: símbolos externos indefinidos __imp__calloc
+glfw3.lib(win32_monitor.c.obj) : error LNK2001: símbolos externos indefinidos __imp__calloc
+glfw3.lib(wgl_context.c.obj) : error LNK2001: símbolos externos indefinidos __imp__free
+glfw3.lib(egl_context.c.obj) : error LNK2001: símbolos externos indefinidos __imp__free
+glfw3.lib(monitor.c.obj) : error LNK2001: símbolos externos indefinidos __imp__free
+glfw3.lib(vulkan.c.obj) : error LNK2001: símbolos externos indefinidos __imp__free
+glfw3.lib(win32_window.c.obj) : error LNK2001: símbolos externos indefinidos __imp__free
+glfw3.lib(win32_joystick.c.obj) : error LNK2001: símbolos externos indefinidos __imp__free
+glfw3.lib(window.c.obj) : error LNK2001: símbolos externos indefinidos __imp__free
+glfw3.lib(input.c.obj) : error LNK2001: símbolos externos indefinidos __imp__free
+glfw3.lib(win32_init.c.obj) : error LNK2001: símbolos externos indefinidos __imp__free
+glfw3.lib(win32_monitor.c.obj) : error LNK2001: símbolos externos indefinidos __imp__free
+glfw3.lib(input.c.obj) : error LNK2019: símbolo externo indefinido __dtoul3 referenciado na função _glfwSetTime
+glfw3.lib(input.c.obj) : error LNK2019: símbolo externo indefinido __ultod3 referenciado na função _glfwGetTime
+glfw3.lib(context.c.obj) : error LNK2019: símbolo externo indefinido __imp__strstr referenciado na função __glfwStringInExtensionString
+glfw3.lib(win32_joystick.c.obj) : error LNK2001: símbolos externos indefinidos __imp__strstr
+glfw3.lib(context.c.obj) : error LNK2019: símbolo externo indefinido __imp__strncmp referenciado na função __glfwRefreshContextAttribs
+glfw3.lib(egl_context.c.obj) : error LNK2001: símbolos externos indefinidos __imp__strncmp
+glfw3.lib(context.c.obj) : error LNK2019: símbolo externo indefinido __imp____stdio_common_vsscanf referenciado na função __vsscanf_l
+glfw3.lib(win32_monitor.c.obj) : error LNK2019: símbolo externo indefinido __imp__realloc referenciado na função __glfwPlatformGetMonitors
+glfw3.lib(monitor.c.obj) : error LNK2019: símbolo externo indefinido __imp___strdup referenciado na função __glfwAllocMonitor
+glfw3.lib(win32_window.c.obj) : error LNK2001: símbolos externos indefinidos __imp___strdup
+glfw3.lib(win32_joystick.c.obj) : error LNK2001: símbolos externos indefinidos __imp___strdup
+glfw3.lib(monitor.c.obj) : error LNK2019: símbolo externo indefinido __imp__qsort referenciado na função _refreshVideoModes
+glfw3.lib(win32_joystick.c.obj) : error LNK2001: símbolos externos indefinidos __imp__qsort
+glfw3.lib(monitor.c.obj) : error LNK2019: símbolo externo indefinido __libm_sse2_pow_precise referenciado na função _glfwSetGamma
+glfw3.lib(win32_window.c.obj) : error LNK2019: símbolo externo indefinido __dtoui3 referenciado na função __glfwPlatformWaitEventsTimeout
+glfw3.lib(win32_joystick.c.obj) : error LNK2019: símbolo externo indefinido __libm_sse2_sqrt_precise referenciado na função _pollJoystickState
+C:\Users\gita\git\MATE20-Projetos\Debug\Transparencia.exe : fatal error LNK1120: 147 externo não resolvidos
