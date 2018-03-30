@@ -10,7 +10,7 @@ struct VisibleIndex {
 	int index;
 };
 
-// Shader storage buffer objects
+// Area de trabalho do shader
 layout(std430, binding = 0) readonly buffer LightBuffer {
 	PointLight data[];
 } lightBuffer;
@@ -25,21 +25,27 @@ uniform mat4 view;
 uniform mat4 projection;
 uniform ivec2 screenSize;
 uniform int lightCount;
+uniform int tileSize;
 
-// Shared values between all the threads in the group
+// Armazenamento compartilhado entre todas as threads
+// Valores compartilhados entre todas threads do grupo de threads
 shared uint minDepthInt;
 shared uint maxDepthInt;
 shared uint visibleLightCount;
 shared vec4 frustumPlanes[6];
-// Shared local storage for visible indices, will be written out to the global buffer at the end
+
+// Valores compartilhados para indices das luzes visíveis. Serão escritos no buffer ao final
 shared int visibleLightIndices[1024];
 shared mat4 viewProjection;
 
-// Took some light culling guidance from Dice's deferred renderer
+
 // http://www.dice.se/news/directx-11-rendering-battlefield-3/
 
 #define TILE_SIZE 16
 layout(local_size_x = TILE_SIZE, local_size_y = TILE_SIZE, local_size_z = 1) in;
+
+bool intersectSphere(vec4 light, vec4 plane);
+
 void main() {
 	ivec2 location = ivec2(gl_GlobalInvocationID.xy);
 	ivec2 itemID = ivec2(gl_LocalInvocationID.xy);
@@ -47,7 +53,7 @@ void main() {
 	ivec2 tileNumber = ivec2(gl_NumWorkGroups.xy);
 	uint index = tileID.y * tileNumber.x + tileID.x;
 
-	// Initialize shared global values for depth and light count
+	// Valores iniciais para contadores e variáveis compartilhadas
 	if (gl_LocalInvocationIndex == 0) {
 		minDepthInt = 0xFFFFFFFF;
 		maxDepthInt = 0;
@@ -55,29 +61,29 @@ void main() {
 		viewProjection = projection * view;
 	}
 
-	barrier();
+	barrier(); // sincroniza todas as threads com a barreira
 
-	// Step 1: Calculate the minimum and maximum depth values (from the depth buffer) for this group's tile
+	// Step 1: Calcula depth mínimo e máximo para este quadro
 	float maxDepth, minDepth;
 	vec2 text = vec2(location) / screenSize;
 	float depth = texture(depthMap, text).r;
-	// Linearize the depth value from depth buffer (must do this because we created it using projection)
+	// Linearização do depth considerando a projeção
 	depth = (0.5 * projection[3][2]) / (depth + 0.5 * projection[2][2] - 0.5);
 
-	// Convert depth to uint so we can do atomic min and max comparisons between the threads
+	// Converte o depth para inteiro para realizar operação atômica de comparação entre threads
 	uint depthInt = floatBitsToUint(depth);
 	atomicMin(minDepthInt, depthInt);
 	atomicMax(maxDepthInt, depthInt);
 
 	barrier();
 
-	// Step 2: One thread should calculate the frustum planes to be used for this tile
+	// Step 2: Calcula frustums
 	if (gl_LocalInvocationIndex == 0) {
-		// Convert the min and max across the entire tile back to float
+		// Converte depth min e max para float novamente
 		minDepth = uintBitsToFloat(minDepthInt);
 		maxDepth = uintBitsToFloat(maxDepthInt);
 
-		// Steps based on tile sale
+		// Parametro para cálculo de cada frustum de acordo com posição do quadro
 		vec2 negativeStep = (2.0 * vec2(tileID)) / vec2(tileNumber);
 		vec2 positiveStep = (2.0 * vec2(tileID + ivec2(1, 1))) / vec2(tileNumber);
 
@@ -89,13 +95,13 @@ void main() {
 		frustumPlanes[4] = vec4(0.0, 0.0, -1.0, -minDepth); // Near
 		frustumPlanes[5] = vec4(0.0, 0.0, 1.0, maxDepth); // Far
 
-		// Transform the first four planes
+		// Transforma os planos Left Right Bottom Top
 		for (uint i = 0; i < 4; i++) {
 			frustumPlanes[i] *= viewProjection;
 			frustumPlanes[i] /= length(frustumPlanes[i].xyz);
 		}
 
-		// Transform the depth planes
+		// Transforma  Near e Far
 		frustumPlanes[4] *= view;
 		frustumPlanes[4] /= length(frustumPlanes[4].xyz);
 		frustumPlanes[5] *= view;
@@ -104,7 +110,7 @@ void main() {
 
 	barrier();
 
-	// Step 3: Cull lights.
+	// Step 3: Corte de luzes (cull)
 	// Parallelize the threads against the lights now.
 	// Can handle 256 simultaniously. Anymore lights than that and additional passes are performed
 	uint threadCount = TILE_SIZE * TILE_SIZE;
@@ -116,10 +122,12 @@ void main() {
 			break;
 		}
 
+		// Obtém posição e raio da esfera que representa ponto de luz
 		vec4 position = lightBuffer.data[lightIndex].position;
 		float radius = lightBuffer.data[lightIndex].paddingAndRadius.w;
 
-		// We check if the light exists in our frustum
+		// Verifica interseção da luz (no caso uma esfera) com frustum
+		// http://www.flipcode.com/archives/Frustum_Culling.shtml
 		float distance = 0.0;
 		for (uint j = 0; j < 6; j++) {
 			distance = dot(position, frustumPlanes[j]) + radius;
@@ -130,9 +138,9 @@ void main() {
 			}
 		}
 
-		// If greater than zero, then it is a visible light
+		// Se foi maior que zero, então tem interseção do frustum com a luz
 		if (distance > 0.0) {
-			// Add index to the shared array of visible indices
+			// Armazena a o índice da luz visível, incrementa o contador de luzes
 			uint offset = atomicAdd(visibleLightCount, 1);
 			visibleLightIndices[offset] = int(lightIndex);
 		}

@@ -15,68 +15,51 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="source\glError.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="initShaders.cpp">
+    <ClCompile Include="source\initShaders.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="glError.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="mesh.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="shader.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="model.cpp">
+    <ClCompile Include="source\main.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="initShaders.h">
+    <ClInclude Include="source\glError.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="glError.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="mesh.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="shader.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="model.h">
+    <ClInclude Include="source\initShaders.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="basico.vert">
-      <Filter>Arquivos de Recurso</Filter>
+    <None Include="shaders\exibir.fs">
+      <Filter>Arquivos de Origem</Filter>
     </None>
-    <None Include="limpar.frag">
-      <Filter>Arquivos de Recurso</Filter>
+    <None Include="shaders\limpar.fs">
+      <Filter>Arquivos de Origem</Filter>
     </None>
-    <None Include="phong.frag">
-      <Filter>Arquivos de Recurso</Filter>
+    <None Include="shaders\phong.fs">
+      <Filter>Arquivos de Origem</Filter>
     </None>
-    <None Include="exibir.frag">
-      <Filter>Arquivos de Recurso</Filter>
+    <None Include="shaders\basico.vs">
+      <Filter>Arquivos de Origem</Filter>
     </None>
-    <None Include="phong.vert">
-      <Filter>Arquivos de Recurso</Filter>
+    <None Include="shaders\phong.vs">
+      <Filter>Arquivos de Origem</Filter>
     </None>
+    <None Include="ETAPAS.md" />
   </ItemGroup>
   <ItemGroup>
-    <Object Include="bunny.obj">
-      <Filter>Arquivos de Recurso</Filter>
+    <Object Include="models\bunny.obj">
+      <Filter>Arquivos de Origem</Filter>
     </Object>
-    <Object Include="plane.obj">
-      <Filter>Arquivos de Recurso</Filter>
+    <Object Include="models\plane.obj">
+      <Filter>Arquivos de Origem</Filter>
     </Object>
-    <Object Include="sphere.obj">
-      <Filter>Arquivos de Recurso</Filter>
+    <Object Include="models\sphere.obj">
+      <Filter>Arquivos de Origem</Filter>
     </Object>
   </ItemGroup>
 </Project>

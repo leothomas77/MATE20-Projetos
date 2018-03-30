@@ -22,28 +22,32 @@ using namespace std;
 //#define DEPTH_DEBUG
 //#define LIGHT_DEBUG
 
-// Renderer constants
-const glm::ivec2 SCREEN_SIZE(1920, 1080); 
+// Constantes
+const int WIDTH  = 800;
+const int HEIGHT = 600;
+const glm::ivec2 SCREEN_SIZE(WIDTH, HEIGHT);
+const int TILE_SIZE = 16; //
 const unsigned int NUM_LIGHTS = 1024;
 const float LIGHT_RADIUS = 30.0f;
 const float NEAR_PLANE = 0.1f;
 const float FAR_PLANE = 300.0f;
+const int MAX_LIGHTS = 1024;
+const float LIGHT_STEP = -4.5f;
 
-// Defines exposure level for HDR lighting
+// Correção HDR - high dinamic range
 const float exposure = 1.0f;
 
-// Constants for light animations
+// Constantes das luzes
 const glm::vec3 LIGHT_MIN_BOUNDS = glm::vec3(-135.0f, -20.0f, -60.0f);
 const glm::vec3 LIGHT_MAX_BOUNDS = glm::vec3(135.0f, 170.0f, 60.0f);
-const float LIGHT_DELTA_TIME = -0.6f;
 
 GLFWwindow* gWindow;
 
-// For drawing our 1 x 1 quad
+// Área para desenhar o quadro
 GLuint quadVAO = 0;
 GLuint quadVBO;
 
-// Mouse and keyboard variables
+// Variáveis de navegação na cena
 bool keys[1024];
 bool keysPressed[1024];
 bool firstMouse = true;
@@ -51,11 +55,11 @@ GLfloat lastX = 400.0f, lastY = 300.0f;
 GLfloat deltaTime = 0.0f;
 GLfloat lastFrame = 0.0f;
 
-// Used for storage buffer objects to hold light data and visible light indicies data
+//Buffers para armazenar dados sobre iluminação
 GLuint lightBuffer = 0;
 GLuint visibleLightIndicesBuffer = 0;
 
-// structures defining the data of both buffers
+// Estruturas para armazenar dados da iluminação
 struct PointLight {
 	glm::vec4 color;
 	glm::vec4 position;
@@ -66,29 +70,29 @@ struct VisibleIndex {
 	int index;
 };
 
-// X and Y work group dimension variables for compute shader
+// Dimensões X e Y para o compute shader
 GLuint workGroupsX = 0;
 GLuint workGroupsY = 0;
 
-// Camera object
+// Camera
 Camera camera(glm::vec3(-40.0f, 10.0f, 0.0f));
 
-// Creates window and initializes GLFW
+// Criação da janela e inicialização do GLFW
 void InitGLFW(int argc, char* argv[]);
 
-// Initializes buffers and scene data
+// Inicialização dos buffers e da cena
 void InitScene();
 
-// Returns a random position in the scene confined to the lightMinBounds and lightMaxBounds
+// Retorna randomicamente posicionamento das luzes
 glm::vec3 RandomPosition(uniform_real_distribution<> dis, mt19937 gen);
 
-// Fills the lightBuffer with lights in random positions and colors
+// Inicializa as luzes com posições e cores randômicas
 void SetupLights();
 
-// Updates light position based on lightDeltaTime. Called each frame
+// Atualiza posição das luzes
 void UpdateLights();
 
-// Mouse and keyboard callback functions
+// Controle de navegação de mouse e teclado
 void Movement();
 static void KeyCallback(GLFWwindow *window, int key, int scanCode, int action, int mods);
 static void MouseCallback(GLFWwindow *window, double x, double y);

@@ -26,6 +26,7 @@
     <None Include="source\shaders\light_culling.comp.glsl" />
     <None Include="source\shaders\light_debug.frag.glsl" />
     <None Include="source\shaders\light_debug.vert.glsl" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\camera.cpp">

@@ -1,4 +1,4 @@
-#version 330 core
+#version 430 core
 
 layout (location = 0) in vec3 position;
 layout (location = 1) in vec3 normal;
@@ -25,12 +25,13 @@ void main() {
 	vertex_out.fragmentPosition = vec3(model * vec4(position, 1.0));
 	vertex_out.textureCoordinates = texCoords;
 
+	//Usa normal mapping para texturas
 	mat3 normalMatrix = transpose(inverse(mat3(model)));
 	vec3 tan = normalize(normalMatrix * tangent);
 	vec3 bitan = normalize(normalMatrix * bitangent);
 	vec3 norm = normalize(normalMatrix * normal);
 
-	// For tangent space normal mapping
+	// 
 	mat3 TBN = transpose(mat3(tan, bitan, norm));
 	vertex_out.tangentViewPosition = TBN * viewPosition;
 	vertex_out.tangentFragmentPosition = TBN * vertex_out.fragmentPosition;

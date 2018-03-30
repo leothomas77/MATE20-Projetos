@@ -1,11 +1,12 @@
+
 #include "main.h"
 
 void InitGLFW(int argc, char* argv[]) {
 	if (!glfwInit()) {
-		throw std::runtime_error("glfwInit failed");
+		throw std::runtime_error("glfwInit falhou");
 	}
 
-	// Open and configure a window with GLFW
+	// Configuração do GLFW
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
@@ -13,70 +14,73 @@ void InitGLFW(int argc, char* argv[]) {
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 	glfwWindowHint(GLFW_SAMPLES, 4);
 
-	gWindow = glfwCreateWindow((int)SCREEN_SIZE.x, (int)SCREEN_SIZE.y, "Forward+ Renderer", NULL, NULL);
+	gWindow = glfwCreateWindow(SCREEN_SIZE.x, SCREEN_SIZE.y, "Forward Plus 0.1", NULL, NULL);
 	if (!gWindow) {
-		throw std::runtime_error("glfwCreateWindow failed. Can your hardware handle OpenGL 4.5?");
+		throw std::runtime_error("Erro em glfwCreateWindow. Precisa de OpenGL 4.3!");
 	}
 	glfwMakeContextCurrent(gWindow);
 
 	glewExperimental = GL_TRUE;
 	if (glewInit() != GLEW_OK) {
-		throw std::runtime_error("glewInit failed");
+		throw std::runtime_error("glewInit falhou");
 	}
 
-	// Print out some info about the graphics drivers
+	// Mostra informações sobre ambiente
 	std::cout << "OpenGL version: " << glGetString(GL_VERSION) << std::endl;
 	std::cout << "GLSL version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
 	std::cout << "Vendor: " << glGetString(GL_VENDOR) << std::endl;
 	std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
 
-	// Make sure OpenGL version 4.5 API is available
-//	if (!GLEW_VERSION_4_5) {
-	//	throw std::runtime_error("OpenGL 4.5 API is not available.");
-//	}
+	// Verifica versão disponível de OpenGL
+	if (!GLEW_VERSION_4_3) {
+		throw std::runtime_error("OpenGL 4.3 API não disponível.");
+	}
 
-	// Enable any OpenGL features we want to use
+	// Habilita funções do OpenGL
 	glEnable(GL_DEPTH_TEST);
 	glDepthMask(GL_TRUE);
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_MULTISAMPLE);
 
-	// Set mouse and keyboard callback functions
+	// Configura eventos de mouse e teclado
 	glfwSetKeyCallback(gWindow, KeyCallback);
 	glfwSetCursorPosCallback(gWindow, MouseCallback);
 	glfwSetInputMode(gWindow, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 }
 
 void InitScene() {
-	// Define work group sizes in x and y direction based off screen size and tile size (in pixels)
-	workGroupsX = (SCREEN_SIZE.x + (SCREEN_SIZE.x % 16)) / 16;
-	workGroupsY = (SCREEN_SIZE.y + (SCREEN_SIZE.y % 16)) / 16;
+	// Divide a tela em uma quantidade de 16 fatias na direção x e y de acordo com o tamanho da tela em pixels
+	// O tamanho de cada retângulo vai variar de acordo com a tela
+	//Cada retângulo vai ser tabalhado em um workgroup separado (todos rodando em paralelo)
+	workGroupsX = (SCREEN_SIZE.x + (SCREEN_SIZE.x % TILE_SIZE)) / TILE_SIZE;
+	workGroupsY = (SCREEN_SIZE.y + (SCREEN_SIZE.y % TILE_SIZE)) / TILE_SIZE;
 	size_t numberOfTiles = workGroupsX * workGroupsY;
 
-	// Generate our shader storage buffers
+	// Geração dos buffers de trabalho para os shaders
 	glGenBuffers(1, &lightBuffer);
 	glGenBuffers(1, &visibleLightIndicesBuffer);
 
-	// Bind light buffer
+	// Bind para buffer de luzes
 	glBindBuffer(GL_SHADER_STORAGE_BUFFER, lightBuffer);
 	glBufferData(GL_SHADER_STORAGE_BUFFER, NUM_LIGHTS * sizeof(PointLight), 0, GL_DYNAMIC_DRAW);
 
-	// Bind visible light indices buffer
+	// Bind para buffer de índices de luzes visíveis em cada quadrado de tela
 	glBindBuffer(GL_SHADER_STORAGE_BUFFER, visibleLightIndicesBuffer);
-	glBufferData(GL_SHADER_STORAGE_BUFFER, numberOfTiles * sizeof(VisibleIndex) * 1024, 0, GL_STATIC_DRAW);
+	glBufferData(GL_SHADER_STORAGE_BUFFER, numberOfTiles * sizeof(VisibleIndex) * MAX_LIGHTS, 0, GL_STATIC_DRAW);
 
-	// Set the default values for the light buffer
+	// Iniclialização das luzes
 	SetupLights();
 
 	glBindBuffer(GL_SHADER_STORAGE_BUFFER, 0);
 }
 
+//Randomização da posição das luzes
 glm::vec3 RandomPosition(uniform_real_distribution<> dis, mt19937 gen) {
 	glm::vec3 position = glm::vec3(0.0);
 	for (int i = 0; i < 3; i++) {
 		float min = LIGHT_MIN_BOUNDS[i];
 		float max = LIGHT_MAX_BOUNDS[i];
-		position[i] = (GLfloat)dis(gen) * (max - min) + min;
+		position[i] = (GLfloat)dis(gen) * (max - min + 1) + min;
 	}
 
 	return position;
@@ -89,7 +93,7 @@ void SetupLights() {
 	
 	random_device rd;
 	mt19937 gen(rd());
-	uniform_real_distribution<> dis(0, 1);
+	uniform_real_distribution<> dis(0, 1); // Gera uma distribuição randomica de números reais no intervalo de [0, 1)
 
 	glBindBuffer(GL_SHADER_STORAGE_BUFFER, lightBuffer);
 	PointLight *pointLights = (PointLight*)glMapBuffer(GL_SHADER_STORAGE_BUFFER, GL_READ_WRITE);
@@ -98,7 +102,7 @@ void SetupLights() {
 		PointLight &light = pointLights[i];
 		light.position = glm::vec4(RandomPosition(dis, gen), 1.0f);
 		light.color = glm::vec4(1.0f + dis(gen), 1.0f + dis(gen), 1.0f + dis(gen), 1.0f);
-		light.paddingAndRadius = glm::vec4(glm::vec3(0.0f), LIGHT_RADIUS);
+		light.paddingAndRadius = glm::vec4(glm::vec3(1.0f), LIGHT_RADIUS);
 	}
 
 	glUnmapBuffer(GL_SHADER_STORAGE_BUFFER);
@@ -111,18 +115,18 @@ void UpdateLights() {
 
 	for (int i = 0; i < NUM_LIGHTS; i++) {
 		PointLight &light = pointLights[i];
-		float min = LIGHT_MIN_BOUNDS[1];
-		float max = LIGHT_MAX_BOUNDS[1];
-
-		light.position.y = fmod((light.position.y + (-4.5f * deltaTime) - min + max), max) + min;
+		float min = LIGHT_MIN_BOUNDS.y;
+		float max = LIGHT_MAX_BOUNDS.y;
+		//varia a posicao y
+		light.position.y = fmod((light.position.y + (LIGHT_STEP * deltaTime) - min + max), max) + min;
 	}
 
 	glUnmapBuffer(GL_SHADER_STORAGE_BUFFER);
 	glBindBuffer(GL_SHADER_STORAGE_BUFFER, 0);
 }
 
+// Movimento da câmera com teclado
 void Movement() {
-	// Camera controls
 	if (keys[GLFW_KEY_W]) {
 		camera.ProcessKeyboard(FORWARD, deltaTime);
 	}
@@ -156,6 +160,7 @@ static void KeyCallback(GLFWwindow *window, int key, int scanCode, int action, i
 	}
 }
 
+//Movimento da câmera com mouse
 static void MouseCallback(GLFWwindow *window, double x, double y) {
 	if (firstMouse) {
 		lastX = (GLfloat)x;
@@ -172,6 +177,9 @@ static void MouseCallback(GLFWwindow *window, double x, double y) {
 	camera.ProcessMouseMovement(xOffset, yOffset);
 }
 
+//Desenha o quadro da tela
+//No Deferred shading os pixels serão gerados em uma textura passo a passo. No passo final, irá desenhar na tela
+//um conjunto de triângulos texturizados com estes pixels
 void DrawQuad() {
 	if (quadVAO == 0) {
 		GLfloat quadVertices[] = {
@@ -201,10 +209,10 @@ void DrawQuad() {
 int main(int argc, char **argv) {
 	InitGLFW(argc, argv);
 
+	// TODO: Para executar, deve modificar todos estes caminhos para o caminho absoluto
 
 	char *dir = "C:\\Users\\gita\\git\\MATE20-Projetos\\Forward-beta";
 
-	// TODO: Make these directories relative to root directory of project
 	Shader depthShader("C:\\Users\\gita\\git\\MATE20-Projetos\\ForwardPlus-beta\\source\\shaders\\depth.vert.glsl",
 		"C:\\Users\\gita\\git\\MATE20-Projetos\\ForwardPlus-beta\\source\\shaders\\depth.frag.glsl", NULL);
 	Shader lightCullingShader("C:\\Users\\gita\\git\\MATE20-Projetos\\ForwardPlus-beta\\source\\shaders\\light_culling.comp.glsl");
@@ -222,9 +230,8 @@ int main(int argc, char **argv) {
 		"C:\\Users\\gita\\git\\MATE20-Projetos\\ForwardPlus-beta\\source\\shaders\\hdr.frag.glsl", NULL);
 #endif
 
-	// So we need to create a depth map FBO
-	// This will be used in the depth pass
-	// Create a depth map frame buffer object and texture
+	//Criação do mapa de depth o passo 1
+	//Armazenamento dos depths em textura
 	GLuint depthMapFBO;
 	glGenFramebuffers(1, &depthMapFBO);
 
@@ -248,7 +255,8 @@ int main(int argc, char **argv) {
 #if defined(DEPTH_DEBUG)
 #elif defined(LIGHT_DEBUG)
 #else
-	// Create a floating point HDR frame buffer and a floating point color buffer (as a texture)
+	
+	//Cria framebuffer para tratar HDR (em formato de textura)
 	GLuint hdrFBO;
 	glGenFramebuffers(1, &hdrFBO);
 
@@ -271,27 +279,26 @@ int main(int argc, char **argv) {
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 #endif
 
-	// Load in our scene models
-	// TODO: Want to replace this path thing with a pay to do this agnostic of what the file path of the project is
-	// Modified the Crytek Sponza model for use in our scene
+	// Carrega o modelo sponza
 	// http://www.crytek.com/cryengine/cryengine3/downloads
 		
 	Model sponzaModel("C:\\Users\\gita\\git\\MATE20-Projetos\\ForwardPlus-beta\\crytek-sponza\\sponza.obj");
 
-	// Initialize the scene by setting up the buffers and assigning default values
+	// Inicialização da cena
 	InitScene();
 
-	// Scale and get the model view transformation matrix
+	// Gera a matriz model view. Aplica escala
 	glm::mat4 model;
 	model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
 
-	// For each shader, bind the uniforms that will during the program's execution
+	// Faz o bind com as variáveis do tipo uniform para cada shader
 	depthShader.Use();
 	glUniformMatrix4fv(glGetUniformLocation(depthShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
 
 	lightCullingShader.Use();
 	glUniform1i(glGetUniformLocation(lightCullingShader.Program, "lightCount"), NUM_LIGHTS);
 	glUniform2iv(glGetUniformLocation(lightCullingShader.Program, "screenSize"), 1, &SCREEN_SIZE[0]);
+
 
 #if defined(DEPTH_DEBUG)
 	depthDebugShader.Use();
@@ -303,72 +310,70 @@ int main(int argc, char **argv) {
 	glUniformMatrix4fv(glGetUniformLocation(lightDebugShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
 	glUniform1i(glGetUniformLocation(lightDebugShader.Program, "totalLightCount"), NUM_LIGHTS);
 	glUniform1i(glGetUniformLocation(lightDebugShader.Program, "numberOfTilesX"), workGroupsX);
+	glUniform1i(glGetUniformLocation(lightDebugShader.Program, "tileSize"), TILE_SIZE);
 #else
 	lightAccumulationShader.Use();
 	glUniformMatrix4fv(glGetUniformLocation(lightAccumulationShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
 	glUniform1i(glGetUniformLocation(lightAccumulationShader.Program, "numberOfTilesX"), workGroupsX);
+	glUniform1i(glGetUniformLocation(lightAccumulationShader.Program, "tileSize"), TILE_SIZE);
 #endif
 
 	// Set viewport dimensions and background color
 	glViewport(0, 0, SCREEN_SIZE.x, SCREEN_SIZE.y);
 	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 
-	// Run while the window is open
+	// Loop principal
 	while (!glfwWindowShouldClose(gWindow)) {
-		// Calculate the delta time used for movement (not for animating the lights)
+		// Calcula tempo para movimentação das luzes 
 		GLfloat currentFrame = (GLfloat)glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
 
-		// Check and call events
+		// Tratamento de eventos
 		glfwPollEvents();
 		Movement();
 
-		// Update light positions
+		// Movimenta luzes
 		UpdateLights();
 
-		// Calculate new projection and view matrices and save current cameraPosition
+		// Calcula matrizes para posição da câmera
 		glm::mat4 projection = glm::perspective(camera.zoom, (float)SCREEN_SIZE.x / (float)SCREEN_SIZE.y, NEAR_PLANE, FAR_PLANE);
 		glm::mat4 view = camera.GetViewMatrix();
 		glm::vec3 cameraPosition = camera.position;
 
-		// Step 1: Render the depth of the scene to a depth map
+		// Step 1: Mapeia o depth da cena
 		depthShader.Use();
 		glUniformMatrix4fv(glGetUniformLocation(depthShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(glGetUniformLocation(depthShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
 		
-		// Bind the depth map's frame buffer and draw the depth map to it
+		// Bind no depth buffer e desenha nele
 		glBindFramebuffer(GL_FRAMEBUFFER, depthMapFBO);
 		glClear(GL_DEPTH_BUFFER_BIT);
 		sponzaModel.Draw(depthShader);
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
-		// Step 2: Perform light culling on point lights in the scene
+		// Step 2: Corte de luzes - compute chader
 		lightCullingShader.Use();
 		glUniformMatrix4fv(glGetUniformLocation(lightCullingShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(glGetUniformLocation(lightCullingShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
 
-		// Bind depth map texture to texture location 4 (which will not be used by any model texture)
+		// Bind do depth buffer no compute shader, posição 4 (demais posições já estão sendo usadas pelos objetos da cena)
 		glActiveTexture(GL_TEXTURE4);
 		glUniform1i(glGetUniformLocation(lightCullingShader.Program, "depthMap"), 4);
 		glBindTexture(GL_TEXTURE_2D, depthMap);
 		
-		// Bind shader storage buffer objects for the light and indice buffers
+		// Bind do storage buffer no shader para armazenar os índices das luzes
 		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, lightBuffer);
 		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 1, visibleLightIndicesBuffer);
 
-
-		// Dispatch the compute shader, using the workgroup values calculated earlier
+		// Dispara o computer shader com os valores de workgroups calculados anteriormente
 		glDispatchCompute(workGroupsX, workGroupsY, 1);
 
-		// Unbind the depth map
+		// Unbind no depth buffer
 		glActiveTexture(GL_TEXTURE4);
 		glBindTexture(GL_TEXTURE_2D, 0);
 
-		// Step 3: Accumulate the remaining lights after culling and render (or execute one of the debug views of a flag is enabled
-		// (Or run one of the debug shaders)
-		
-		// Depth debug shader
+		// Debug do depth shader e light shader
 #if defined(DEPTH_DEBUG)
 		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, 0);
 		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 1, 0);
@@ -387,13 +392,15 @@ int main(int argc, char **argv) {
 		glUniformMatrix4fv(glGetUniformLocation(lightDebugShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(glGetUniformLocation(lightDebugShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
 		glUniform3fv(glGetUniformLocation(lightDebugShader.Program, "viewPosition"), 1, &cameraPosition[0]);
+		glUniform1i(glGetUniformLocation(lightDebugShader.Program, "tileSize"), TILE_SIZE);
 
 		sponzaModel.Draw(lightDebugShader);
 
 		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, 0);
 		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 1, 0);
 #else
-		// We render the scene into the floating point HDR frame buffer
+		// Step 3: Calcula a contribuição das luzes computadas
+		// Renderiza em framebuffer. Utiliza o recurso de HDR em ponto flutuante
 		glBindFramebuffer(GL_FRAMEBUFFER, hdrFBO);
 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -402,9 +409,10 @@ int main(int argc, char **argv) {
 		glUniformMatrix4fv(glGetUniformLocation(lightAccumulationShader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(glGetUniformLocation(lightAccumulationShader.Program, "view"), 1, GL_FALSE, glm::value_ptr(view));
 		glUniform3fv(glGetUniformLocation(lightAccumulationShader.Program, "viewPosition"), 1, &cameraPosition[0]);
+		glUniform1i(glGetUniformLocation(lightAccumulationShader.Program, "tileSize"), TILE_SIZE);
 
-		// Blending might be needed if we add additional passes, but may not work correctly with objects with transparency masks
-		// Disabled for now
+		// Blending necessita de passos adicionais
+		// Por hora desabilitado
 		//glEnable(GL_BLEND);
 		//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		//glBlendFunc(GL_ONE_MINUS_DST_ALPHA, GL_DST_ALPHA);
@@ -414,14 +422,16 @@ int main(int argc, char **argv) {
 
 		//glDisable(GL_BLEND);
 		
-		// Tonemap the HDR colors to the default framebuffer
+		// O HDR alarga o valor ente o ponto mais claro e o mais escuro da imagem usando fatores de correção
+		// https://learnopengl.com/Advanced-Lighting/HDR
+
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Weirdly, moving this call drops performance into the floor
 		hdrShader.Use();
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, colorBuffer);
 		glUniform1f(glGetUniformLocation(hdrShader.Program, "exposure"), exposure);
 		DrawQuad();
-		
+
 		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, 0);
 		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 1, 0);
 #endif
@@ -429,7 +439,6 @@ int main(int argc, char **argv) {
 		glfwSwapBuffers(gWindow);
 	}
 
-	// Clean up and exit
 	glfwTerminate();
 
 	return 0;

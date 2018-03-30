@@ -32,6 +32,7 @@ uniform sampler2D texture_diffuse1;
 uniform sampler2D texture_specular1;
 uniform sampler2D texture_normal1;
 uniform int numberOfTilesX;
+uniform int tileSize;
 
 out vec4 fragColor;
 
@@ -46,15 +47,17 @@ float attenuate(vec3 lightDirection, float radius) {
 }
 
 void main() {
-	// Determine which tile this pixel belongs to
+	// Determina em que quadrado o pixel está
 	ivec2 location = ivec2(gl_FragCoord.xy);
-	ivec2 tileID = location / ivec2(16, 16);
+	ivec2 tileID = location / ivec2(tileSize, tileSize);
 	uint index = tileID.y * numberOfTilesX + tileID.x;
 
-	// Get color and normal components from texture maps
+	// Obtém cor e normal do normal map
 	vec4 base_diffuse = texture(texture_diffuse1, fragment_in.textureCoordinates);
 	vec4 base_specular = texture(texture_specular1, fragment_in.textureCoordinates);
 	vec3 normal = texture(texture_normal1, fragment_in.textureCoordinates).rgb;
+
+	//Expande a normal
 	normal = normalize(normal * 2.0 - 1.0);
 	vec4 color = vec4(0.0, 0.0, 0.0, 1.0);
 
@@ -72,7 +75,7 @@ void main() {
 		vec3 tangentLightPosition = fragment_in.TBN * light.position.xyz;
 		float lightRadius = light.paddingAndRadius.w;
 
-		// Calculate the light attenuation on the pre-normalized lightDirection
+		// Calcula atenuação da luz na direção pre-normalizada
 		vec3 lightDirection = tangentLightPosition - fragment_in.tangentFragmentPosition;
 		float attenuation = attenuate(lightDirection, lightRadius);
 
@@ -80,12 +83,12 @@ void main() {
 		lightDirection = normalize(lightDirection);
 		vec3 halfway = normalize(lightDirection + viewDirection);
 
-		// Calculate the diffuse and specular components of the irradiance, then irradiance, and accumulate onto color
+		// Calcula componentes difusa e especular da irradiancia e acumula a cor
 		float diffuse = max(dot(lightDirection, normal), 0.0);
 		// How do I change the material propery for the spec exponent? is it the alpha of the spec texture?
 		float specular = pow(max(dot(normal, halfway), 0.0), 32.0);
 
-		// Hacky fix to handle issue where specular light still effects scene once point light has passed into an object
+		//Hack para contornar quando luz especular ainda fica na cena quando a luz passa pelo objeto
 		if (diffuse == 0.0) {
 			specular = 0.0;
 		}
@@ -96,7 +99,7 @@ void main() {
 
 	color.rgb += base_diffuse.rgb * 0.08;
 
-	// Use the mask to discard any fragments that are transparent
+	// Hack para descartar fragmento com transparência
 	if (base_diffuse.a <= 0.2) {
 		discard;
 	}
