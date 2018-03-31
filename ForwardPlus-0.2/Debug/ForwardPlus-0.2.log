@@ -1,0 +1,23 @@
+﻿  deferred_shading_volumes.cpp
+c:\users\gita\git\opengl-experiments\learnopengl\includes\learnopengl\filesystem.h(23): error C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdlib.h(1199): note: consulte a declaração de 'getenv'
+c:\users\gita\git\opengl-experiments\learnopengl\includes\learnopengl\shader.h(65): warning C4101: 'infoLog': variável local não referenciada
+c:\users\gita\git\opengl-experiments\learnopengl\includes\learnopengl\shader.h(64): warning C4101: 'success': variável local não referenciada
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(29): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(30): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(177): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(178): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(179): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(182): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(183): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(184): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(201): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(270): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(271): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(460): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(461): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(465): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(466): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(468): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(469): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.2\source\deferred_shading_volumes.cpp(478): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados

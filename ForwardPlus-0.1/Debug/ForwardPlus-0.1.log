@@ -1,0 +1,17 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ForwardPlus-0.1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  forward_plus.cpp
+c:\users\gita\git\opengl-experiments\learnopengl\includes\learnopengl\shader_m.h(39): warning C4101: 'infoLog': variável local não referenciada
+c:\users\gita\git\opengl-experiments\learnopengl\includes\learnopengl\shader_m.h(38): warning C4101: 'success': variável local não referenciada
+c:\users\gita\git\opengl-experiments\learnopengl\includes\learnopengl\shader_m.h(89): warning C4101: 'infoLog': variável local não referenciada
+c:\users\gita\git\opengl-experiments\learnopengl\includes\learnopengl\shader_m.h(88): warning C4101: 'success': variável local não referenciada
+c:\users\gita\git\mate20-projetos\forwardplus-0.1\source\forward_plus.cpp(279): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.1\source\forward_plus.cpp(473): warning C4305: '=': truncamento de 'double' para 'glm::float32'
+c:\users\gita\git\mate20-projetos\forwardplus-0.1\source\forward_plus.cpp(474): warning C4305: '=': truncamento de 'double' para 'glm::float32'
+c:\users\gita\git\mate20-projetos\forwardplus-0.1\source\forward_plus.cpp(542): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.1\source\forward_plus.cpp(543): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.1\source\forward_plus.cpp(547): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.1\source\forward_plus.cpp(548): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.1\source\forward_plus.cpp(550): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.1\source\forward_plus.cpp(551): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\forwardplus-0.1\source\forward_plus.cpp(560): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
+  ForwardPlus-0.1.vcxproj -> C:\Users\gita\git\MATE20-Projetos\Debug\ForwardPlus.exe
