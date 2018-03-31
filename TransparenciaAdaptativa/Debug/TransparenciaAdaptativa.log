@@ -1,0 +1,14 @@
+﻿  transparencia.cpp
+c:\users\gita\git\opengl-experiments\learnopengl\includes\learnopengl\shader_m.h(39): warning C4101: 'infoLog': variável local não referenciada
+c:\users\gita\git\opengl-experiments\learnopengl\includes\learnopengl\shader_m.h(38): warning C4101: 'success': variável local não referenciada
+c:\users\gita\git\opengl-experiments\learnopengl\includes\learnopengl\shader_m.h(89): warning C4101: 'infoLog': variável local não referenciada
+c:\users\gita\git\opengl-experiments\learnopengl\includes\learnopengl\shader_m.h(88): warning C4101: 'success': variável local não referenciada
+c:\users\gita\git\mate20-projetos\transparenciaadaptativa\source\transparencia.cpp(108): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\transparenciaadaptativa\source\transparencia.cpp(198): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\transparenciaadaptativa\source\transparencia.cpp(199): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\transparenciaadaptativa\source\transparencia.cpp(203): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\transparenciaadaptativa\source\transparencia.cpp(204): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\transparenciaadaptativa\source\transparencia.cpp(206): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\transparenciaadaptativa\source\transparencia.cpp(207): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gita\git\mate20-projetos\transparenciaadaptativa\source\transparencia.cpp(216): warning C4244: 'argumento': conversão de 'double' para 'float', possível perda de dados
+  TransparenciaAdaptativa.vcxproj -> C:\Users\gita\git\MATE20-Projetos\Debug\TransparenciaAdaptativa.exe
